@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+            table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+            td, th {
+            border: 1px solid #747474;
+            text-align: left;
+            padding: 8px;
+            }
+
+            tr:nth-child(even) {
+            background-color: #e3dfdf;
+            }
+
+            #weather {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+  </style>
+  </head>
+  <body>
+    <h1>What is the weather</h1>
+    
+  <form action="#" method="post">
+    <div class="input-group mb-3">
+      <input type="text" name="city_name" class="form-control" placeholder="City name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-outline-secondary" >Search</button>
+        </div>
+      </div>
+  </form>
+  <h3>City name: {{city}}</h3>  
+  <h3>Country: {{country}}</h3>
+  {{error_msg}}
+  {{error}}
+  <body>
+    <!-- <table>
+      <tr>
+          <th>Time</th>
+          <th>Temperature</th>
+          <th>Humidity</th>
+          <th>Weather</th>
+          <th>Wind</th>
+      </tr>
+      {% for item in data["list"] %}
+          <tr>
+              <td>{{ item["dt_txt"] }}</td>
+              <td>{{ item["main"]["temp"] }}°C</td>
+              <td>{{ item["main"]["humidity"] }}%</td>
+              <td><div id="weather"><img  src="http://openweathermap.org/img/wn/{{ item["weather"][0]["icon"] }}.png" width="50" height="50"></img> {{ item["weather"][0]["main"] }}</div></td>
+              <td>{{ '%.2f' % (item["wind"]["speed"]*3.6) }} km/h ({{ item["wind"]["deg"] }} deg)</td>
+          </tr>
+      {% endfor %}
+  </table> -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
